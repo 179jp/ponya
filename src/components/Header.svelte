@@ -31,7 +31,7 @@
 		translate: -0.25em -0.1em;
 	}
 	.ya {
-		font-size: 90%;
+		font-size: 93%;
 		translate: 0.1em -0.25em;
 	}
 </style>

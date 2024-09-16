@@ -58,13 +58,13 @@
 	}
 
 	.post {
-		margin-top: 1em;
+		margin-top: var(--size-3);
 	}
 	.post_wrap {
 		color: #333;
 		display: grid;
 		gap: 0.5em;
-		grid-template-columns: 2em 1fr;
+		grid-template-columns: 1.8em 1fr;
 		width: 100%;
 		overflow: hidden;
 	}
