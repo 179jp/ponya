@@ -25,6 +25,7 @@
 		display: inline-block;
 	}
 	.po {
+		scale: 1 0.9;
 	}
 	.nn {
 		font-size: 92%;
