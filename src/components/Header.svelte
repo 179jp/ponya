@@ -17,8 +17,8 @@
 		font-size: clamp(2rem, calc(1.5rem + 1vw), 3rem);
 		height: 200px;
 		position: absolute;
-		top: -0.1em;
-		right: -0.35em;
+		top: 2em;
+		right: -0.3em;
 		writing-mode: vertical-rl;
 	}
 	.siteLogo span {
@@ -31,7 +31,7 @@
 		translate: -0.25em -0.1em;
 	}
 	.ya {
-		font-size: 92%;
+		font-size: 90%;
 		translate: 0.1em -0.25em;
 	}
 </style>
