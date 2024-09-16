@@ -35,6 +35,7 @@
 		padding: 0 0.5em 4em 0.5em;
 	}
 	.featureHeader {
+		color: var(--text-1);
 		overflow: hidden;
 		padding: 2em 0 0;
 		position: relative;

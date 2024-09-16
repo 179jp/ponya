@@ -13,6 +13,7 @@
 		width: 100%;
 	}
 	.siteLogo {
+		color: var(--text-1);
 		font-size: clamp(2rem, calc(1.5rem + 1vw), 3rem);
 		height: 200px;
 		position: absolute;
@@ -30,7 +31,7 @@
 		translate: -0.25em -0.1em;
 	}
 	.ya {
-		font-size: 95%;
+		font-size: 92%;
 		translate: 0.1em -0.25em;
 	}
 </style>
