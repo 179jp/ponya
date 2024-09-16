@@ -1,0 +1,23 @@
+body {
+	font-size: 16px;
+	font-feature-settings: 'palt';
+	line-height: 1.6;
+}
+
+body {
+	font-family: fot-tsukuaoldmin-pr6n, sans-serif;
+	font-weight: 300;
+	font-style: normal;
+}
+.neueHaas-thin {
+	font-family: neue-haas-unica, sans-serif;
+	font-weight: 200;
+	font-style: normal;
+	line-height: 1.4;
+}
+.neueHaas-black {
+	font-family: neue-haas-unica, sans-serif;
+	font-weight: 800;
+	font-style: normal;
+	line-height: 1.4;
+}
