@@ -1,6 +1,9 @@
 <script lang="ts">
 	import { formatDate } from '$lib/utils';
 	import * as config from '$lib/config';
+	import { setupViewTransition } from 'sveltekit-view-transition';
+
+	setupViewTransition();
 
 	export let data;
 </script>

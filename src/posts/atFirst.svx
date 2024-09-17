@@ -1,9 +1,12 @@
 ---
-title: Svelteで書くこと
+title: webで表現したい
 titleEnglish: I choose web.
 description: これは初めての投稿です。
 author: koichiro yamashita
 date: '2024-9-17'
+photo: /img/L1039071.JPG
+photoDec: 夕暮れに輝く魚のモビール
+colorTheme: stone
 categories:
   - sveltekit
   - svelte
@@ -17,7 +20,7 @@ published: true
 <VerticalText>
 雑誌『idea』の「紙媒体がつなぐ未来」号に惹かれて、食い入るように眺めたあと、自分でもつくりたくなった。  
 でも、紙で作りたいわけではなく、あくまで web でやりたい。  
-紙の本、雑誌は大好きだ。家には妻に呆れられるくらいの本がある。  
+紙の本、雑誌は大好きだ。家には家族に呆れられるくらいの本がある。  
 同じくらい、web が好きだ。物理的な紙の本や雑誌に憧れつつ、どうしたらその魅力を web 上でも表現できるか考えていた。  
 何か解決方法があるわけではないけれど、このスペースでその挑戦をしてみたい。  
 note や Instagram で書くこともやってみたけど、見た目とセットでフォーマットから作りたい。
