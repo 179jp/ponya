@@ -1,7 +1,10 @@
 ---
-title: webで表現したい
+title: webで表現がしたい
 titleEnglish: I choose web.
-description: これは初めての投稿です。
+description: 紙の特集に惹かれて、web で表現したくなった。
+lead:
+  - 紙の特集に惹かれて、web で表現したくなった。
+  - 文も写真も、内容も見た目もセットで表現したい。
 author: koichiro yamashita
 date: '2024-9-17'
 photo: /img/L1039071.JPG

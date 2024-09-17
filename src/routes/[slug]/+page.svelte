@@ -21,9 +21,12 @@
 
 	<hgroup class="hg">
 		<p class="hg_d neueHaas-thin">{formatDate(data.meta.date)}</p>
-		<h1 class="hg_t">{data.meta.title}</h1>
+		<div class="hg_m">
+			<h1 class="hg_t">{data.meta.title}</h1>
+			<p class="hg_l">{data.meta.lead.join('\n')}</p>
+		</div>
 		<ul class="hg_c neueHaas-mid">
-			<li class="hg_u">url | /{data.slug}</li>
+			<li class="hg_u">https://ponya.xyz/{data.slug}</li>
 			<li class="hg_u">author | {data.meta.author}</li>
 		</ul>
 	</hgroup>
@@ -54,13 +57,28 @@
 		z-index: 1;
 	}
 	.hg_d {
-		font-size: var(--font-size-fluid-2);
+		font-size: var(--font-size-fluid-1);
+	}
+	.hg_m {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-around;
+		height: var(--height-fluid-6);
+		margin: var(--size-fluid-6) 0;
+		width: 50%;
 	}
 	.hg_t {
 		align-items: center;
 		display: flex;
 		font-size: var(--font-size-fluid-4);
-		height: var(--height-fluid-5);
+		writing-mode: vertical-rl;
+		font-feature-settings: 'vpal';
+	}
+	.hg_l {
+		font-size: var(--font-size-fluid-1);
+		writing-mode: vertical-rl;
+		font-feature-settings: 'vpal';
+		white-space: pre-wrap;
 	}
 	.hg_c {
 		align-items: flex-end;
