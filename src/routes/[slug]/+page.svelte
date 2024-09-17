@@ -42,12 +42,14 @@
 </article>
 
 <style>
+	article {
+		padding: 0 0 var(--size-fluid-8);
+	}
 	.hg {
 		display: flex;
 		flex-direction: column;
-		height: var(--height-fluid-10);
+		height: var(--height-fluid-11);
 		margin: 0 0 var(--size-fluid-4);
-		padding: 0 0 var(--size-fluid-8);
 		position: relative;
 		z-index: 1;
 	}

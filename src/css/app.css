@@ -38,6 +38,7 @@ html {
 	--height-fluid-5: clamp(10em, 45ch, 15em);
 	--height-fluid-8: clamp(15em, 80ch, 20em);
 	--height-fluid-10: clamp(20em, 90ch, 35em);
+	--height-fluid-11: clamp(25em, 95ch, 40em);
 }
 
 @media (prefers-color-scheme: light) {
