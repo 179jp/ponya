@@ -45,7 +45,7 @@
 		display: flex;
 		flex-direction: column;
 		height: var(--height-fluid-10);
-		margin: 0 0 var(--size-fluid-4);
+		margin: calc(env(safe-area-inset-bottom) * (-1)) 0 var(--size-fluid-4);
 		padding-top: env(safe-area-inset-bottom);
 		position: relative;
 		z-index: 1;
