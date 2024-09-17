@@ -5,3 +5,10 @@
 <footer>
 	<p>&copy; {new Date().getFullYear()} {config.title}</p>
 </footer>
+
+<style>
+	footer {
+		display: flex;
+		align-items: flex-end;
+	}
+</style>
