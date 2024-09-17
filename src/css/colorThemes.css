@@ -1,0 +1,11 @@
+.stone {
+	--accecnt-color: #9ac222;
+	--text-color: var(--stone-2);
+	--bkg-color: #75675f;
+}
+
+article {
+	background: var(--bkg-color);
+	color: var(--text-color);
+	padding: 0 0 var(--size-fluid-8);
+}

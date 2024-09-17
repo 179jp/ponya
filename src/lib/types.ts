@@ -8,5 +8,8 @@ export type Post = {
 	description: string;
 	date: string;
 	categories: Categories[];
+	colorTheme: string;
+	photo: string;
+	photoDec: string;
 	published: boolean;
 };
