@@ -1,15 +1,15 @@
 ---
-title: webで表現がしたい
-titleEnglish: I choose web.
+title: 光と影
+titleEnglish: Lights and shadows
 description: 紙の特集に惹かれて、web で表現したくなった。
 lead:
   - 紙の特集に惹かれて、web で表現したくなった。
   - 文も写真も、内容も見た目もセットで表現したい。
 author: koichiro yamashita
-date: '2024-9-16'
-photo: /img/L1039071.JPG
+date: '2024-9-17'
+photo: /img/L1039159.JPG
 photoDec: 夕暮れに輝く魚のモビール
-colorTheme: stone
+colorTheme: lights-and-shadows
 categories:
   - sveltekit
   - svelte

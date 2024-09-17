@@ -1,9 +1,17 @@
 <script lang="ts">
+	import { onMount, onDestroy } from 'svelte';
 	import { formatDate } from '$lib/utils';
 
 	import '../../css/colorThemes.css';
 
 	export let data;
+
+	onMount(() => {
+		document.body.classList.add(data.meta.colorTheme);
+		return () => {
+			document.body.classList.remove(data.meta.colorTheme);
+		};
+	});
 </script>
 
 <!-- SEO -->
@@ -14,14 +22,15 @@
 	<meta name="theme-color" content="#75675f" />
 </svelte:head>
 
-<article class={data.meta.colorTheme}>
+<article class={`article-${data.meta.colorTheme}`}>
 	<div class="article_img">
 		<img src={data.meta.photo} alt={data.meta.photoDec} />
 	</div>
 
 	<hgroup class="hg">
-		<p class="hg_d neueHaas-thin">{formatDate(data.meta.date)}</p>
+		<p class="hg_d neueHaas-mid">{formatDate(data.meta.date, 'medium', true)}</p>
 		<div class="hg_m">
+			<p class="hg_e">{data.meta.titleEnglish}</p>
 			<h1 class="hg_t">{data.meta.title}</h1>
 			<p class="hg_l">{data.meta.lead.join('\n')}</p>
 		</div>
@@ -47,64 +56,5 @@
 <style>
 	article {
 		padding: 0 0 var(--size-fluid-8);
-	}
-	.hg {
-		display: flex;
-		flex-direction: column;
-		height: var(--height-fluid-11);
-		margin: 0 0 var(--size-fluid-4);
-		position: relative;
-		z-index: 1;
-	}
-	.hg_d {
-		font-size: var(--font-size-fluid-1);
-	}
-	.hg_m {
-		display: flex;
-		flex-direction: row-reverse;
-		justify-content: space-around;
-		height: var(--height-fluid-6);
-		margin: var(--size-fluid-6) 0;
-		width: 50%;
-	}
-	.hg_t {
-		align-items: center;
-		display: flex;
-		font-size: var(--font-size-fluid-4);
-		writing-mode: vertical-rl;
-		font-feature-settings: 'vpal';
-	}
-	.hg_l {
-		font-size: var(--font-size-fluid-1);
-		writing-mode: vertical-rl;
-		font-feature-settings: 'vpal';
-		white-space: pre-wrap;
-	}
-	.hg_c {
-		align-items: flex-end;
-		color: rgb(var(--bkg-color));
-		display: flex;
-		flex-direction: column;
-		font-size: var(--font-size-fluid-00);
-		padding: var(--size-fluid-2);
-	}
-	.article_img {
-		position: fixed;
-		top: 0;
-		left: 0;
-		height: 100vh;
-		width: 100vw;
-		z-index: -1;
-	}
-	.article_img img {
-		height: 100%;
-		object-fit: cover;
-		width: 100%;
-	}
-
-	.prose {
-		background: rgba(var(--bkg-color), 0.7);
-		backdrop-filter: blur(7px);
-		padding: var(--size-fluid-6) 0;
 	}
 </style>
