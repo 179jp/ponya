@@ -21,7 +21,7 @@
 	<ul class="posts">
 		{#each data.posts as post}
 			<li class="post">
-				<a href={post.slug} class="post_wrap">
+				<a href={`issue/${post.slug}`} class="post_wrap">
 					<span class="post_day neueHaas-mid">{formatDate(post.date, 'medium', true)}</span>
 					<p class="post_info">
 						<span class="post_title">{post.title}</span>

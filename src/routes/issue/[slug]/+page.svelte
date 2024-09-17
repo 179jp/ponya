@@ -2,7 +2,7 @@
 	import { onMount, onDestroy } from 'svelte';
 	import { formatDate } from '$lib/utils';
 
-	import '../../css/colorThemes.css';
+	import '../../../css/colorThemes.css';
 
 	export let data;
 
