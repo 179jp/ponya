@@ -8,7 +8,9 @@
 
 <style>
 	footer {
-		display: flex;
 		align-items: flex-end;
+		display: flex;
+		padding-top: var(--size-fluid-5);
+		width: 100%;
 	}
 </style>

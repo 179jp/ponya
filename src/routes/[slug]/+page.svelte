@@ -61,6 +61,7 @@
 	}
 	.hg_c {
 		align-items: flex-end;
+		color: var(--bkg-color);
 		display: flex;
 		flex-direction: column;
 		font-size: var(--font-size-fluid-0);
