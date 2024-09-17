@@ -19,7 +19,7 @@
 	<hgroup class="hg">
 		<p class="hg_d neueHaas-thin">{formatDate(data.meta.date)}</p>
 		<h1 class="hg_t">{data.meta.title}</h1>
-		<ul class="hg_c neueHaas-thin">
+		<ul class="hg_c neueHaas-mid">
 			<li class="hg_u">url | /{data.slug}</li>
 			<li class="hg_u">author | {data.meta.author}</li>
 		</ul>
@@ -47,6 +47,7 @@
 		flex-direction: column;
 		height: var(--height-fluid-10);
 		margin: 0 0 var(--size-fluid-4);
+		padding: 0 0 var(--size-fluid-8);
 		position: relative;
 		z-index: 1;
 	}
@@ -64,7 +65,7 @@
 		color: var(--bkg-color);
 		display: flex;
 		flex-direction: column;
-		font-size: var(--font-size-fluid-0);
+		font-size: var(--font-size-fluid-00);
 		padding: var(--size-fluid-2);
 	}
 	.hg_img {
