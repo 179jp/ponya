@@ -11,6 +11,7 @@
 	<title>{data.meta.title}</title>
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content={data.meta.title} />
+	<meta name="theme-color" content="#75675f" />
 </svelte:head>
 
 <article class={data.meta.colorTheme}>
@@ -45,8 +46,7 @@
 		display: flex;
 		flex-direction: column;
 		height: var(--height-fluid-10);
-		margin: calc(env(safe-area-inset-bottom) * (-1)) 0 var(--size-fluid-4);
-		padding-top: env(safe-area-inset-bottom);
+		margin: 0 0 var(--size-fluid-4);
 		position: relative;
 		z-index: 1;
 	}
