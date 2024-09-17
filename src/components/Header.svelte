@@ -28,11 +28,11 @@
 		scale: 1 0.9;
 	}
 	.nn {
-		font-size: 92%;
+		font-size: 90%;
 		translate: -0.14em -0.26em;
 	}
 	.ya {
-		font-size: 91%;
+		font-size: 89%;
 		translate: 0.21em -0.54em;
 	}
 </style>
