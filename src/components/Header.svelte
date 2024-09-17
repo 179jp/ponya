@@ -29,10 +29,10 @@
 	}
 	.nn {
 		font-size: 92%;
-		translate: -0.25em -0.1em;
+		translate: -0.14em -0.26em;
 	}
 	.ya {
-		font-size: 93%;
-		translate: 0.1em -0.25em;
+		font-size: 91%;
+		translate: 0.21em -0.54em;
 	}
 </style>
