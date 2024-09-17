@@ -1,8 +1,8 @@
 :where(body) {
 	--accecnt-color: #9ac222;
 	--text-color: var(--stone-2);
-	--bkg-color: #75675f;
+	--bkg-color: 117, 103, 95;
 
-	background: var(--bkg-color);
+	background: rgb(var(--bkg-color));
 	color: var(--text-color);
 }

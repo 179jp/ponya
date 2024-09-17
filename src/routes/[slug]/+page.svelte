@@ -15,7 +15,10 @@
 </svelte:head>
 
 <article class={data.meta.colorTheme}>
-	<!-- Title -->
+	<div class="article_img">
+		<img src={data.meta.photo} alt={data.meta.photoDec} />
+	</div>
+
 	<hgroup class="hg">
 		<p class="hg_d neueHaas-thin">{formatDate(data.meta.date)}</p>
 		<h1 class="hg_t">{data.meta.title}</h1>
@@ -23,9 +26,6 @@
 			<li class="hg_u">url | /{data.slug}</li>
 			<li class="hg_u">author | {data.meta.author}</li>
 		</ul>
-		<div class="hg_img">
-			<img src={data.meta.photo} alt={data.meta.photoDec} />
-		</div>
 	</hgroup>
 
 	<!-- Tags -->
@@ -70,17 +70,23 @@
 		font-size: var(--font-size-fluid-00);
 		padding: var(--size-fluid-2);
 	}
-	.hg_img {
-		position: absolute;
+	.article_img {
+		position: fixed;
 		top: 0;
 		left: 0;
-		height: 100%;
-		width: 100%;
+		height: 100vh;
+		width: 100vw;
 		z-index: -1;
 	}
-	.hg_img img {
+	.article_img img {
 		height: 100%;
 		object-fit: cover;
 		width: 100%;
+	}
+
+	.prose {
+		background: rgba(var(--bkg-color), 0.7);
+		backdrop-filter: blur(7px);
+		padding: var(--size-fluid-6) 0;
 	}
 </style>
