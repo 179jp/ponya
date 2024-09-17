@@ -33,6 +33,11 @@ html {
 	--surface-4: var(--surface-4-dark);
 	--background: var(--background-dark);
 	--border: var(--border-dark);
+
+	/* 高さの定義 */
+	--height-fluid-5: clamp(10em, 45ch, 15em);
+	--height-fluid-8: clamp(15em, 80ch, 20em);
+	--height-fluid-10: clamp(20em, 90ch, 35em);
 }
 
 @media (prefers-color-scheme: light) {
@@ -78,6 +83,18 @@ html {
 	--background: var(--background-light);
 	--border: var(--border-light);
 }
+
+/*
+*/
+
+ul,
+ul li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+/* ---------------------------------- */
 
 body {
 	font-size: 16px;

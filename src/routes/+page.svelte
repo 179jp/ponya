@@ -52,13 +52,14 @@
 		transform-origin: right top;
 		translate: -1.6em -0.4em;
 		writing-mode: vertical-rl;
+		font-feature-settings: 'vpal';
 	}
 
 	.posts {
 	}
 
 	.post {
-		margin-top: var(--size-3);
+		margin-top: var(--size-6);
 	}
 	.post_wrap {
 		color: #333;
@@ -67,11 +68,12 @@
 		grid-template-columns: 1.8em 1fr;
 		width: 100%;
 		overflow: hidden;
+		text-decoration: none;
 	}
 	.post_info {
 		display: flex;
 		flex-direction: column;
-		padding-top: 1.5em;
+		padding-top: 1.6em;
 		position: relative;
 	}
 	.post_title {
@@ -85,5 +87,6 @@
 		transform-origin: right top;
 		translate: -1.6em -0.4em;
 		writing-mode: vertical-rl;
+		font-feature-settings: 'vpal';
 	}
 </style>
