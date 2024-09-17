@@ -109,6 +109,10 @@ body {
 	font-style: normal;
 }
 
+main {
+	min-height: 85ch;
+}
+
 .neueHaas-thin,
 .neueHaas-mid,
 .neueHaas-black {
