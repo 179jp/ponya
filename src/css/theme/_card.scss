@@ -22,7 +22,7 @@
 		opacity: 0.8;
 		padding: var(--size-fluid-1);
 		position: absolute;
-		top: 0;
+		top: var(--size-fluid-1);
 		left: var(--size-fluid-6);
 	}
 	.hg_m {
@@ -40,7 +40,7 @@
 		position: absolute;
 		transform-origin: left bottom;
 		top: 50%;
-		left: 0;
+		left: var(--size-fluid-1);
 	}
 	.hg_t {
 		font-size: var(--font-size-fluid-1);
@@ -65,7 +65,7 @@
 		font-size: var(--font-size-fluid-00);
 		padding: var(--size-fluid-2);
 		position: absolute;
-		bottom: 15%;
+		bottom: 5%;
 		right: 0;
 	}
 	.article_img {

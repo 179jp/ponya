@@ -24,7 +24,7 @@
 		display: flex;
 		flex-direction: column-reverse;
 		margin: 0;
-		padding: 0;
+		padding: 0 var(--size-fluid-2);
 		list-style: none;
 		font-size: var(--size-fluid-1);
 	}
