@@ -21,10 +21,13 @@
 
 <style>
 	.breadCrumbs {
+		align-items: center;
 		display: flex;
-		flex-direction: column-reverse;
+		flex-direction: row-reverse;
+		justify-content: flex-end;
+		gap: var(--size-fluid-2);
 		margin: 0;
-		padding: 0 var(--size-fluid-2);
+		padding: 0 var(--size-fluid-1);
 		list-style: none;
 	}
 
@@ -32,7 +35,6 @@
 		align-items: center;
 		display: flex;
 		font-size: var(--size-fluid-125);
-		gap: var(--size-fluid-2);
 	}
 
 	.breadCrumbs li:last-child::after {
@@ -54,5 +56,6 @@
 
 	.breadCrumbs a::before {
 		content: '→';
+		margin-right: var(--size-fluid-2);
 	}
 </style>
