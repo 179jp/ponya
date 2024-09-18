@@ -1,5 +1,5 @@
 ---
-title: 人差し指と影
+title: 木の実屋さん
 titleEnglish: Forefinger and Shadow
 description: むっちりした人差し指。伸びる影。
 lead:
