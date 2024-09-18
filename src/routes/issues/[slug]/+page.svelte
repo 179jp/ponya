@@ -54,15 +54,15 @@
 	<div class="prose">
 		<svelte:component this={data.content} />
 	</div>
-
-	<BreadCrumbs
-		data={[
-			{ name: 'Top', url: '/' },
-			{ name: 'Issues', url: '/issues' },
-			{ name: data.meta.title, url: `/issues/${data.slug}` }
-		]}
-	/>
 </article>
+
+<BreadCrumbs
+	data={[
+		{ name: 'Top', url: '/' },
+		{ name: 'Issues', url: '/issues' },
+		{ name: data.meta.title, url: `/issues/${data.slug}` }
+	]}
+/>
 
 <style>
 	:root {
