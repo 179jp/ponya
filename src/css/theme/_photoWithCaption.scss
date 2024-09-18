@@ -9,7 +9,7 @@
 
 .photoWithCaption {
 	.hg {
-		height: 85ch;
+		height: 100svh;
 		margin: 0 0 var(--size-fluid-4);
 		padding: var(--size-fluid-2) var(--size-fluid-2) var(--size-fluid-2);
 		position: relative;
@@ -47,7 +47,7 @@
 		writing-mode: vertical-rl;
 		font-feature-settings: 'vpal';
 		position: absolute;
-		top: var(--size-fluid-5);
+		top: var(--size-fluid-7);
 		left: 0.25em;
 	}
 	.hg_l {
@@ -72,7 +72,7 @@
 		position: absolute;
 		top: var(--size-fluid-2);
 		left: var(--size-fluid-2);
-		height: calc(85ch - var(--size-fluid-2) * 2);
+		height: calc(100svh - var(--size-fluid-2) * 2);
 		width: calc(100vw - (var(--size-fluid-2) * 2));
 		z-index: -1;
 	}
@@ -84,7 +84,7 @@
 	}
 
 	article {
-		height: calc(85ch + var(--size-fluid-2) * 2);
+		height: 100svh;
 		position: relative;
 	}
 

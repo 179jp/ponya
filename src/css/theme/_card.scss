@@ -72,8 +72,8 @@
 		position: absolute;
 		top: var(--size-fluid-4);
 		left: var(--size-fluid-5);
-		height: calc(70ch - var(--size-fluid-4) * 2);
-		width: calc(100cw - var(--size-fluid-4) - var(--size-fluid-2));
+		height: calc(100svh - var(--size-fluid-4) * 2);
+		width: calc(100vw - var(--size-fluid-4) - var(--size-fluid-2));
 		z-index: -1;
 	}
 	.article_img img {
