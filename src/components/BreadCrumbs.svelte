@@ -34,7 +34,7 @@
 	.breadCrumbs li {
 		align-items: center;
 		display: flex;
-		font-size: var(--size-fluid-125);
+		font-size: var(--font-size-fluid-1);
 	}
 
 	.breadCrumbs li:last-child::after {
@@ -44,7 +44,7 @@
 	.breadCrumbs a {
 		color: var(--color-surface-4);
 		display: flex;
-		font-size: var(--size-fluid-125);
+		font-size: var(--font-size-fluid-1);
 		text-decoration: none;
 		gap: var(--size-fluid-1);
 		padding: 0.25em 0;
