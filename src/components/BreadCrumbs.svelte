@@ -56,6 +56,5 @@
 
 	.breadCrumbs a::before {
 		content: '→';
-		margin-right: var(--size-fluid-2);
 	}
 </style>
