@@ -25,7 +25,7 @@
 		display: flex;
 		flex-direction: row-reverse;
 		justify-content: flex-end;
-		gap: var(--size-fluid-2);
+		gap: var(--size-fluid-1);
 		margin: 0;
 		padding: 0 var(--size-fluid-1);
 		list-style: none;
@@ -34,7 +34,7 @@
 	.breadCrumbs li {
 		align-items: center;
 		display: flex;
-		font-size: var(--font-size-fluid-1);
+		font-size: var(--font-size-fluid-0);
 	}
 
 	.breadCrumbs li:last-child::after {
@@ -44,7 +44,7 @@
 	.breadCrumbs a {
 		color: var(--color-surface-4);
 		display: flex;
-		font-size: var(--font-size-fluid-1);
+		font-size: var(--font-size-fluid-0);
 		text-decoration: none;
 		gap: var(--size-fluid-1);
 		padding: 0.25em 0;
