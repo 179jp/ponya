@@ -62,9 +62,3 @@
 		]}
 	/>
 </article>
-
-<style>
-	article {
-		padding: 0 0 var(--size-fluid-8);
-	}
-</style>
