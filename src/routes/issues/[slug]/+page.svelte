@@ -7,6 +7,7 @@
 	import '../../../css/colorThemes.css';
 
 	export let data;
+	let rootElement: HTMLElement;
 
 	onMount(() => {
 		document.body.classList.add(data.meta.colorTheme);
@@ -14,13 +15,6 @@
 			document.body.classList.remove(data.meta.colorTheme);
 		};
 	});
-
-	let rootElement: HTMLElement;
-	// data.meta.colors に指定された色を rootElement の CSS カスタムプロパティにセット
-	$: rootElement &&
-		data.meta.colors.forEach((color: any, i: number) =>
-			rootElement.style.setProperty(`--${color.name}-color`, color.value)
-		);
 </script>
 
 <!-- SEO -->
@@ -31,7 +25,7 @@
 	<meta name="theme-color" content="#75675f" />
 </svelte:head>
 
-<article class={`article-${data.meta.colorTheme}`} bind:this={rootElement}>
+<article class={`article-${data.meta.colorTheme}`}>
 	<div class="article_img">
 		<img src={data.meta.photo} alt={data.meta.photoDec} />
 	</div>
