@@ -7,7 +7,7 @@ lead:
   - 文も写真も、内容も見た目もセットで表現したい。
 author: koichiro yamashita
 date: '2024-9-17'
-photo: /img/L1039159.JPG
+photo: /img/issues/L1015922.JPG
 photoDec: 夕暮れに輝く魚のモビール
 colorTheme: framed
 categories:

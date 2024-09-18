@@ -6,7 +6,7 @@ lead:
   - むっちりした人差し指。伸びる影。
 author: koichiro yamashita
 date: '2024-9-18'
-photo: /img/L1039159.JPG
+photo: /img/issues/L1039159.JPG
 photoDec: むっちりした人差し指。伸びる影。
 colorTheme: card
 categories:
