@@ -232,7 +232,7 @@
   width: 100%;
 }
 .card .hg {
-  height: calc(70svh - var(--size-fluid-2) - var(--size-fluid-5));
+  height: calc(75svh - var(--size-fluid-2) - var(--size-fluid-5));
   margin: 0 0 var(--size-fluid-4);
   padding: var(--size-fluid-2) var(--size-fluid-2) var(--size-fluid-5);
   position: relative;
@@ -295,7 +295,7 @@
   position: absolute;
   top: var(--size-fluid-4);
   left: var(--size-fluid-5);
-  height: calc(70svh - var(--size-fluid-4) * 2);
+  height: calc(75svh - var(--size-fluid-4) * 2);
   width: calc(100vw - var(--size-fluid-4) - var(--size-fluid-2));
   z-index: -1;
 }
@@ -319,7 +319,7 @@
 }
 
 .photoWithCaption .hg {
-  height: 100lvh;
+  height: 100svh;
   margin: 0 0 var(--size-fluid-4);
   padding: var(--size-fluid-2);
   position: relative;
