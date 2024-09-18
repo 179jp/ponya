@@ -31,7 +31,7 @@
 	.breadCrumbs li {
 		align-items: center;
 		display: flex;
-		font-size: var(--size-fluid-15);
+		font-size: var(--size-fluid-125);
 		gap: var(--size-fluid-2);
 	}
 
@@ -42,10 +42,10 @@
 	.breadCrumbs a {
 		color: var(--color-surface-4);
 		display: flex;
-		font-size: var(--size-fluid-15);
+		font-size: var(--size-fluid-125);
 		text-decoration: none;
 		gap: var(--size-fluid-1);
-		padding: var(--size-fluid-1) 0;
+		padding: 0.5em 0;
 	}
 
 	.breadCrumbs a:hover {
