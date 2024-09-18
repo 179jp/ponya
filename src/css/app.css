@@ -40,6 +40,13 @@ html {
 	--height-fluid-9: clamp(18em, 85ch, 30em);
 	--height-fluid-10: clamp(20em, 90ch, 35em);
 	--height-fluid-11: clamp(25em, 95ch, 40em);
+
+	/* フォントのカラー */
+	--bkg-color: 234, 234, 234;
+	--text-color: var(--stone-9);
+	--title-color: var(--stone-1);
+	--sub-color: var(--stone-7);
+	--accecnt-color: var(--blue-7);
 }
 
 @media (prefers-color-scheme: light) {

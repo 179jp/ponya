@@ -11,6 +11,7 @@ export type Post = {
 	date: string;
 	categories: Categories[];
 	colorTheme: string;
+	colors: Object[];
 	photo: string;
 	photoDec: string;
 	published: boolean;

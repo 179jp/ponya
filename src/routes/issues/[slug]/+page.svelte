@@ -14,6 +14,13 @@
 			document.body.classList.remove(data.meta.colorTheme);
 		};
 	});
+
+	let rootElement: HTMLElement;
+	// data.meta.colors に指定された色を rootElement の CSS カスタムプロパティにセット
+	$: rootElement &&
+		data.meta.colors.forEach((color: any, i: number) =>
+			rootElement.style.setProperty(`--${color.name}-color`, color.value)
+		);
 </script>
 
 <!-- SEO -->
@@ -24,13 +31,13 @@
 	<meta name="theme-color" content="#75675f" />
 </svelte:head>
 
-<article class={`article-${data.meta.colorTheme}`}>
+<article class={`article-${data.meta.colorTheme}`} bind:this={rootElement}>
 	<div class="article_img">
 		<img src={data.meta.photo} alt={data.meta.photoDec} />
 	</div>
 
 	<hgroup class="hg">
-		<p class="hg_d neueHaas-mid">{formatDate(data.meta.date, 'medium', true)}</p>
+		<p class="hg_d">{formatDate(data.meta.date, 'medium', true)}</p>
 		<div class="hg_m">
 			<p class="hg_e">{data.meta.titleEnglish}</p>
 			<h1 class="hg_t">{data.meta.title}</h1>
@@ -38,7 +45,7 @@
 		</div>
 		<ul class="hg_c neueHaas-mid">
 			<li class="hg_u">https://ponya.xyz/{data.slug}</li>
-			<li class="hg_u">author | {data.meta.author}</li>
+			<li class="hg_u">by {data.meta.author}</li>
 		</ul>
 	</hgroup>
 
@@ -62,3 +69,9 @@
 		]}
 	/>
 </article>
+
+<style>
+	:root {
+		--bkg-color: inherit;
+	}
+</style>

@@ -10,6 +10,7 @@ date: '2024-9-17'
 photo: /img/issues/L1015922.JPG
 photoDec: 夕暮れに輝く魚のモビール
 colorTheme: framed
+colors: [{ name: 'bkg', value: 'rgb(214, 51, 108)' }]
 categories:
   - sveltekit
   - svelte

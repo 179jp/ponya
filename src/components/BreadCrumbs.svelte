@@ -4,7 +4,7 @@
 	const lastPage = data.slice(-1)[0];
 </script>
 
-<ol class="breadCrumbs ja-san-serif" vocab="https://schema.org/" typeof="BreadcrumbList">
+<ol class="breadCrumbs" vocab="https://schema.org/" typeof="BreadcrumbList">
 	{#each pages as item, i}
 		<li property="itemListElement" typeof="ListItem">
 			<a property="item" typeof="WebPage" href={item.url}>
@@ -26,7 +26,7 @@
 		margin: 0;
 		padding: 0 var(--size-fluid-2);
 		list-style: none;
-		font-size: var(--size-fluid-1);
+		font-size: var(--size-fluid-2);
 	}
 
 	.breadCrumbs li {
