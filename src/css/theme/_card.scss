@@ -22,7 +22,7 @@
 		opacity: 0.8;
 		padding: var(--size-fluid-1);
 		position: absolute;
-		top: var(--size-fluid-1);
+		top: calc(var(--size-fluid-1) - 0.25em);
 		left: var(--size-fluid-6);
 	}
 	.hg_m {
@@ -40,7 +40,7 @@
 		position: absolute;
 		transform-origin: left bottom;
 		top: 50%;
-		left: var(--size-fluid-1);
+		left: calc(var(--size-fluid-1) + 0.25em);
 	}
 	.hg_t {
 		font-size: var(--font-size-fluid-1);
@@ -48,7 +48,7 @@
 		font-feature-settings: 'vpal';
 		position: absolute;
 		top: var(--size-fluid-5);
-		left: 0;
+		left: 0.25em;
 	}
 	.hg_l {
 		display: inline-block;
