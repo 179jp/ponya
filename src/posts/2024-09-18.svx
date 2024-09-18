@@ -1,13 +1,13 @@
 ---
-title: 十五夜
-titleEnglish: The Night of the Full Moon
-description: 十五夜の月を眺めながら、散歩した。
+title: 人差し指と影
+titleEnglish: Forefinger and Shadow
+description: むっちりした人差し指。伸びる影。
 lead:
-  - 十五夜の月を眺めながら、散歩した。
+  - むっちりした人差し指。伸びる影。
 author: koichiro yamashita
 date: '2024-9-18'
 photo: /img/L1039159.JPG
-photoDec: 十五夜の月
+photoDec: むっちりした人差し指。伸びる影。
 colorTheme: card
 categories:
   - sveltekit
@@ -20,11 +20,7 @@ published: true
 </script>
 
 <ColumnText>
-雑誌『idea』の「紙媒体がつなぐ未来」号に惹かれて、食い入るように眺めたあと、自分でもつくりたくなった。  
-でも、紙で作りたいわけではなく、あくまで web でやりたい。  
-紙の本、雑誌は大好きだ。家には家族に呆れられるくらいの本がある。  
-同じくらい、web が好きだ。物理的な紙の本や雑誌に憧れつつ、どうしたらその魅力を web 上でも表現できるか考えていた。  
-何か解決方法があるわけではないけれど、このスペースでその挑戦をしてみたい。  
-note や Instagram で書くこともやってみたけど、見た目とセットでフォーマットから作りたい。
-だから、わざわざサイトをつくり、文章を書く。
+植物園を散歩した時に、落ちていた木の実を並べて、お店屋さんごっこを始めた息子。なぜか、人差し指を握っているのが、とてもかわいい。
+日が傾いてきた冬の夕暮れ時。どんぐりや赤や緑の実の影が長く伸びていた。
+何気ない瞬間を撮ったものだけど、時間が経ってもお気に入りの一枚。
 </ColumnText>
