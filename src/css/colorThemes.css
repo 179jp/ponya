@@ -226,8 +226,13 @@
   color: var(--text-color);
 }
 
+.card article {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
 .card .hg {
-  height: var(--height-fluid-9);
+  height: calc(70svh - var(--size-fluid-2) - var(--size-fluid-5));
   margin: 0 0 var(--size-fluid-4);
   padding: var(--size-fluid-2) var(--size-fluid-2) var(--size-fluid-5);
   position: relative;
@@ -290,7 +295,7 @@
   position: absolute;
   top: var(--size-fluid-4);
   left: var(--size-fluid-5);
-  height: calc(100svh - var(--size-fluid-4) * 2);
+  height: calc(70svh - var(--size-fluid-4) * 2);
   width: calc(100vw - var(--size-fluid-4) - var(--size-fluid-2));
   z-index: -1;
 }
@@ -314,9 +319,9 @@
 }
 
 .photoWithCaption .hg {
-  height: 100svh;
+  height: 100lvh;
   margin: 0 0 var(--size-fluid-4);
-  padding: var(--size-fluid-2) var(--size-fluid-2) var(--size-fluid-2);
+  padding: var(--size-fluid-2);
   position: relative;
   z-index: 1;
 }
@@ -389,7 +394,7 @@
   width: 100%;
 }
 .photoWithCaption article {
-  height: 100svh;
+  height: calc(100lvh + var(--size-fluid-4));
   position: relative;
 }
 .photoWithCaption .prose {
