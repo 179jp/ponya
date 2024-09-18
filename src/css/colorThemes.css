@@ -216,6 +216,93 @@
   padding: var(--size-fluid-6) 0;
 }
 
+:where(body.card) {
+  --accecnt-color: #9ac222;
+  --text-color: var(--stone-9);
+  --bkg-color: 234, 234, 234;
+  background: rgb(var(--bkg-color));
+  color: var(--text-color);
+}
+
+.card .hg {
+  height: var(--height-fluid-9);
+  margin: 0 0 var(--size-fluid-4);
+  padding: var(--size-fluid-2) var(--size-fluid-2) var(--size-fluid-5);
+  position: relative;
+  z-index: 1;
+}
+.card .hg_d {
+  color: var(--stone-5);
+  display: inline-block;
+  font-size: var(--font-size-fluid-0);
+  opacity: 0.8;
+  padding: var(--size-fluid-1);
+  position: absolute;
+  top: 0;
+  left: var(--size-fluid-6);
+}
+.card .hg_m {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 90%;
+}
+.card .hg_e {
+  display: inline-block;
+  font-size: var(--font-size-fluid-0);
+  line-height: var(--font-lineheight-0);
+  rotate: 90deg;
+  position: absolute;
+  transform-origin: left bottom;
+  top: 50%;
+  left: 0;
+}
+.card .hg_t {
+  font-size: var(--font-size-fluid-1);
+  writing-mode: vertical-rl;
+  font-feature-settings: "vpal";
+  position: absolute;
+  top: var(--size-fluid-5);
+  left: 0;
+}
+.card .hg_l {
+  display: inline-block;
+  font-size: var(--font-size-fluid-1);
+  width: 100%;
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+}
+.card .hg_c {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-size-fluid-00);
+  padding: var(--size-fluid-2);
+  position: absolute;
+  bottom: 15%;
+  right: 0;
+}
+.card .article_img {
+  position: absolute;
+  top: var(--size-fluid-4);
+  left: var(--size-fluid-4);
+  height: calc(60vh - var(--size-fluid-4) * 2);
+  width: calc(100vw - var(--size-fluid-4) - var(--size-fluid-2));
+  z-index: -1;
+}
+.card .article_img img {
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  vertical-align: top;
+  width: 100%;
+}
+.card .prose {
+  padding: 0 var(--size-fluid-2) var(--size-fluid-6);
+}
+
 .tags {
   display: none;
 }/*# sourceMappingURL=colorThemes.css.map */

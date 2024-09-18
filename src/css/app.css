@@ -37,6 +37,7 @@ html {
 	/* 高さの定義 */
 	--height-fluid-5: clamp(10em, 45ch, 15em);
 	--height-fluid-8: clamp(15em, 80ch, 20em);
+	--height-fluid-9: clamp(18em, 85ch, 30em);
 	--height-fluid-10: clamp(20em, 90ch, 35em);
 	--height-fluid-11: clamp(25em, 95ch, 40em);
 }
