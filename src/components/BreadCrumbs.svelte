@@ -45,7 +45,7 @@
 		font-size: var(--size-fluid-125);
 		text-decoration: none;
 		gap: var(--size-fluid-1);
-		padding: 0.5em 0;
+		padding: 0.25em 0;
 	}
 
 	.breadCrumbs a:hover {
