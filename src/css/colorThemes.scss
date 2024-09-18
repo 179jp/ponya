@@ -1,3 +1,7 @@
 @import 'theme/_clear';
 @import 'theme/_stone';
-@import 'theme/_lights-and-shadows';
+@import 'theme/_framed';
+
+.tags {
+	display: none;
+}

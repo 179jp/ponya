@@ -1,4 +1,4 @@
-:where(body.lights-and-shadows) {
+:where(body.framed) {
 	--accecnt-color: #9ac222;
 	--text-color: var(--stone-9);
 	--bkg-color: 234, 234, 234;
@@ -7,7 +7,7 @@
 	color: var(--text-color);
 }
 
-.lights-and-shadows {
+.framed {
 	.hg {
 		color: var(--stone-2);
 		display: flex;

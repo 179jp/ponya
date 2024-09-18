@@ -141,7 +141,7 @@
   padding: var(--size-fluid-6) 0;
 }
 
-:where(body.lights-and-shadows) {
+:where(body.framed) {
   --accecnt-color: #9ac222;
   --text-color: var(--stone-9);
   --bkg-color: 234, 234, 234;
@@ -149,7 +149,7 @@
   color: var(--text-color);
 }
 
-.lights-and-shadows .hg {
+.framed .hg {
   color: var(--stone-2);
   display: flex;
   flex-direction: column;
@@ -159,13 +159,13 @@
   position: relative;
   z-index: 1;
 }
-.lights-and-shadows .hg_d {
+.framed .hg_d {
   color: var(--stone-5);
   font-size: var(--font-size-fluid-1);
   opacity: 0.5;
   padding: var(--size-fluid-1);
 }
-.lights-and-shadows .hg_m {
+.framed .hg_m {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -174,20 +174,20 @@
   padding: var(--size-fluid-5) var(--size-fluid-2) 0;
   width: 90%;
 }
-.lights-and-shadows .hg_e {
+.framed .hg_e {
   font-size: var(--font-size-fluid-4);
   line-height: var(--font-lineheight-0);
 }
-.lights-and-shadows .hg_t {
+.framed .hg_t {
   align-items: center;
   display: flex;
   font-size: var(--font-size-fluid-2);
 }
-.lights-and-shadows .hg_l {
+.framed .hg_l {
   font-size: var(--font-size-fluid-1);
   white-space: pre-wrap;
 }
-.lights-and-shadows .hg_c {
+.framed .hg_c {
   align-items: flex-start;
   color: rgb(var(--bkg-color));
   display: flex;
@@ -195,7 +195,7 @@
   font-size: var(--font-size-fluid-00);
   padding: var(--size-fluid-2);
 }
-.lights-and-shadows .article_img {
+.framed .article_img {
   position: absolute;
   top: var(--size-fluid-2);
   left: var(--size-fluid-2);
@@ -203,15 +203,19 @@
   width: calc(100vw - var(--size-fluid-2) * 2);
   z-index: -1;
 }
-.lights-and-shadows .article_img img {
+.framed .article_img img {
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
   width: 100%;
 }
-.lights-and-shadows .prose {
+.framed .prose {
   background: rgba(var(--bkg-color), 0.7);
   -webkit-backdrop-filter: blur(7px);
           backdrop-filter: blur(7px);
   padding: var(--size-fluid-6) 0;
+}
+
+.tags {
+  display: none;
 }/*# sourceMappingURL=colorThemes.css.map */

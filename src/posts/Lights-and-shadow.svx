@@ -9,7 +9,7 @@ author: koichiro yamashita
 date: '2024-9-17'
 photo: /img/L1039159.JPG
 photoDec: 夕暮れに輝く魚のモビール
-colorTheme: lights-and-shadows
+colorTheme: framed
 categories:
   - sveltekit
   - svelte
