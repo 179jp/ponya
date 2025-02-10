@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content';
+import FormattedDate from './phage/FormattedDate.astro';
+
+const { currentId } = Astro.props;
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+---
+
+<aside class="phageUnit">
+  <ul class="phageArticleList">
+    {
+      posts.map((post) => (
+        <li>
+          {
+            currentId === post.id
+              ? <FormattedDate date={post.data.date} />
+              : <a href={`/blog/2025/${post.id}/`}>
+                  <FormattedDate date={post.data.date} />
+                </a>
+          }
+        </li>
+      ))
+    }
+  </ul>
+</aside>

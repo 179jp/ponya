@@ -1,0 +1,12 @@
+---
+const { title, caption, image } = Astro.props;
+const c = 'phageCoverImgA';
+---
+
+<div class={c}>
+  <h1 class={`${c}_title vText`}>{title}</h1>
+  <figure class={`${c}_figure`}>
+    <img class={`${c}_img`} src={image} alt={caption} />
+    <figcaption class={`${c}_caption`}>{caption}</figcaption>
+  </figure>
+</div>

@@ -1,0 +1,7 @@
+body {
+  font-family: var(--device-font);
+  font-weight: 300;
+}
+.blogWrapper {
+  padding-bottom: calc(var(--rowGrid) * 4);
+}

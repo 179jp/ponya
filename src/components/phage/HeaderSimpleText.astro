@@ -1,0 +1,8 @@
+---
+const { text } = Astro.props;
+const c = 'phageHeaderSimpleText';
+---
+
+<div class={c}>
+  <p class={`${c}_word`}>{text}</p>
+</div>

@@ -1,0 +1,7 @@
+---
+const { body, isSerif = true } = Astro.props;
+---
+
+<div class="phageVerticalColumn phageVerticalText" class:list={isSerif ? 'serif' : 'sans'}>
+  <p>{body}</p>
+</div>

@@ -1,0 +1,13 @@
+---
+const range = Array.from({ length: 10 }, (_, i) => i + 1);
+---
+
+<div class="gridsWrap">
+	<div class="grids grids-small">
+    {
+      range.map(i => (
+        <div class="gridColumn">{i}</div>
+      ))
+    }
+	</div>
+</div>

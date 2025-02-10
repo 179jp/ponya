@@ -1,0 +1,20 @@
+---
+interface Props {
+	date: Date;
+}
+
+const { date } = Astro.props;
+const month = date.toLocaleDateString('ja-jp', {
+			month: 'short',
+		}).replace('月', '');
+const day = date.toLocaleDateString('ja-jp', {
+			day: 'numeric',
+		}).replace('日', '');
+const weekday = date.toLocaleDateString('ja-jp', {
+			weekday: 'short',
+		});
+---
+
+<time datetime={date.toISOString()}>
+<span class="num">{month}</span>月<span class="num">{day}</span>日（<span class="weekday">{weekday}</span>）
+</time>

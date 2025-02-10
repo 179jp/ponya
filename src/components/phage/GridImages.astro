@@ -1,0 +1,15 @@
+---
+const { images, captions } = Astro.props;
+const imageNum = images.length;
+const c = 'phageGridImages';
+
+---
+
+<div class={c}>
+  {images.map((image, index) => (
+    <figure class={`${c}_figure num-${(index + 1)}`}>
+      <img class={`${c}_img`} src={image} alt={captions[image]} />
+      <figcaption class={`${c}_caption`}>{captions[index]}</figcaption>
+    </figure>
+  ))}
+</div>

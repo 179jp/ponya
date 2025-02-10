@@ -1,0 +1,22 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+type Props = HTMLAttributes<'a'>;
+
+const { link, text, site = "", class: className, ...props } = Astro.props;
+---
+
+<a class="article_quoteLink" href={link} target="_blank" {...props}>
+  {
+    () => {
+      if (site){
+        return (
+          <span class="article_quoteSiteName">{site}</span><br />
+          <span>『{text}』</span>
+        )
+      } else {
+        return {text}
+      }
+    }
+  }
+</a>

@@ -1,0 +1,15 @@
+---
+const { title, description, caption, image, body } = Astro.props;
+---
+
+<section class="phageA">
+  <div class="phageA_header">
+    <p class="phageA_description">{description}</p>
+    <h1 class="phageA_title">{title}</h1>
+  </div>
+  <figure class="phageA_image">
+    <img src={image} alt={caption} />
+    <figcaption>{caption}</figcaption>
+  </figure>
+  <div class="phageA_body phageVerticalText"><p>{body}</p></div>
+</section>
