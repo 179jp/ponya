@@ -1,0 +1,22 @@
+@theme {
+  --text-xxs: 0.625rem;
+}
+
+.text-vertical {
+  writing-mode: vertical-rl;
+  font-feature-settings: "vpal";
+  p {
+    text-align: justify;
+  }
+}
+.ponShelf  {
+  height: 18rem;
+  display: flex;
+  flex-direction: column;
+}
+.ponShelf-m {
+  height: 13rem;
+}
+.ponShelf-s {
+  height: 10rem;
+}
