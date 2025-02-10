@@ -1,0 +1,11 @@
+---
+const { isbn, size, title, ...props } = Astro.props;
+---
+
+<div class={`h-full object-contain`}>
+  <a href={`/books/${isbn}`}>
+    <img 
+      class={`w-full h-full object-contain`}
+      src={`/img/books/${isbn}.jpg`} alt={title} />
+  </a>
+</div>
