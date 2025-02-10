@@ -25,13 +25,14 @@ const books = (await getCollection('books')).sort(
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body class={`p-2 bg-neutral-200 text-neutral-900`}>
+	<body class={`bg-neutral-200 text-neutral-900`}>
 		<Header num={books.length} />
 		<main>
 			<div class={`
 				ponShelf py-4 
 				text-vertical 
 				border-b border-neutral-300
+				overflow-x-auto overflow-y-hidden
 				gap-2`}>
 				<Logo />
 				<p class={`text-sm`}>
