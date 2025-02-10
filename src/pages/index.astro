@@ -29,11 +29,12 @@ const books = (await getCollection('books')).sort(
 		<Header num={books.length} />
 		<main>
 			<div class={`
-				ponShelf py-4 
+				ponShelf px-2 py-4
 				text-vertical 
 				border-b border-neutral-300
+				w-full
 				overflow-x-auto overflow-y-hidden
-				gap-2`}>
+				items-center gap-2`}>
 				<Logo />
 				<p class={`text-sm`}>
 					ようこそ、いらっしゃいませ。週末は突然の雪景色。寒いのは嫌ですけど、雪が振るとうれしくなり、雪を頭に積もらせながら雪だるまを作った週末でした。
