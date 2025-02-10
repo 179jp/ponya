@@ -27,6 +27,7 @@ const bookCollection = defineCollection({
     addDate: z.coerce.date(),
     amazonLink: z.string().optional(),
     kindleLink: z.string().optional(),
+    audibleLink: z.string().optional(),
     updatedDate: z.coerce.date().optional(),
   }),
 });
