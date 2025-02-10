@@ -12,20 +12,26 @@ const blogCollection = defineCollection({
   }),
 });
 
-// INTERVIEWS
-const interviews = defineCollection({
+// Books
+const bookCollection = defineCollection({
   // Load Markdown and MDX files in the `src/content/blog/` directory.
-  loader: glob({ base: "./src/content/interviews/", pattern: "**/*.{md,mdx}" }),
+  loader: glob({ base: "./src/content/books/", pattern: "**/*.{md,mdx}" }),
   // Type-check frontmatter using a schema
   schema: z.object({
     title: z.string(),
-    // Transform string to Date object
-    pubDate: z.coerce.date(),
+    author: z.string(),
+    page: z.number(),
+    isbn: z.string(),
+    publishDate: z.coerce.date(),
+    publisher: z.string(),
+    addDate: z.coerce.date(),
+    amazonLink: z.string().optional(),
+    kindleLink: z.string().optional(),
     updatedDate: z.coerce.date().optional(),
-    heroImage: z.string().optional(),
   }),
 });
 
 export const collections = {
   blog: blogCollection,
+  books: bookCollection,
 };
