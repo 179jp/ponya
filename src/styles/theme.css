@@ -10,7 +10,7 @@
   }
 }
 .ponShelf  {
-  height: 18rem;
+  height: 16rem;
   display: flex;
   flex-direction: column;
 }
