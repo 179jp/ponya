@@ -8,6 +8,7 @@ import Footer from '../components/Footer.astro';
 import Logo from '../components/Logo.astro';
 import BookCover from '../components/BookCover.astro';
 import BookShelf1 from '../components/BookShelf_1.astro';
+import BookShelf1_2 from '../components/BookShelf_1-2.astro';
 import BookShelf3 from '../components/BookShelf_3.astro';
 import BookShelf8 from '../components/BookShelf_8.astro';
 
@@ -59,6 +60,13 @@ const books = (await getCollection('books')).sort(
 					books[15], books[16], books[17], books[18], books[19],
 					books[20], books[21], books[22], books[23], books[24],
 				]}
+				/>
+			<BookShelf1_2
+			book={books[25]}
+			text="「おもしろいから書くのではない、書いているからどんどんおもしろいことが増える」小説、エッセイ、短歌、絵本と幅広い創作で注目される作家、くどうれいん。その創作の原点は日記にあった。そんな彼女の日記の初の書籍化が本書である。日々の短文日記=「日記の練習」とそれをもとにしたエッセイ「日記の本番」をとおして浮かび上がる、作家くどうれいん一年間の生活と思考と情動。書かなかった日も、あまりに長くなってしまう日も、それこそが日常のなかの日記だ。"
+			/>
+			<BookShelf3
+				books={[books[26], books[27], books[28]]}
 				/>
 		</main>
 		<Footer />
