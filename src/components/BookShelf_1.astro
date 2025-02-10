@@ -1,0 +1,15 @@
+---
+const { book, text } = Astro.props;
+
+import BookCover from './BookCover.astro';
+---
+
+<div class={`
+  ponShelf ponShelf-m text-vertical 
+  w-full py-4 
+  border-b border-neutral-300
+  overflow-x-auto
+  gap-2`}>
+  <BookCover isbn={book.data.isbn} title={book.data.title} />
+  <p class={`text-sm`}>{text}</p>
+</div>
