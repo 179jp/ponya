@@ -26,7 +26,7 @@ const books = (await getCollection('books')).sort(
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body class={`p-2 bg-neutral-200 text-neutral-900`}>
-		<Header />
+		<Header num={books.length} />
 		<main>
 			<div class={`
 				ponShelf py-4 
@@ -48,13 +48,13 @@ const books = (await getCollection('books')).sort(
 				/>
 			<BookShelf8
 				books={[
-					books[0], books[2], books[1], books[4], books[3],
-					books[0], books[2], books[1], books[4], books[3],
+					books[5], books[6], books[7], books[8], books[9],
+					books[10], books[11], books[12], books[13], books[14],
 				]}
 				/>
 			<BookShelf8
 				books={[
-					books[3], books[4], books[1], books[2], books[0],
+					books[15], books[16], books[17], books[18], books[0],
 					books[0], books[2], books[1], books[4], books[3],
 				]}
 				/>
