@@ -5,7 +5,7 @@ export default {
 		extend: {
 			fontSize: {
 				'2xs': '.625rem',
-				sm: ['0.875rem', 'calc(1.6 / 0.875)'],
+				sm: ['0.875rem', 'calc(1.5 / 0.875)'],
 			}
 		},
 	},
