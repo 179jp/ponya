@@ -29,7 +29,7 @@
   --base-font-weight: 300;
   --base-font-style: normal;
 	*/
-  --base-font: "IwaNMNewsPro-Th", sans-serif;
+  --base-font: serif;
   --base-font-weight: 400;
   --base-font-style: normal;
 
@@ -55,6 +55,9 @@
 
 body {
   font-family: var(--base-font);
+  font-weight: var(--base-font-weight);
+  font-variation-settings: "wght" 500;
+  font-style: var(--base-font-style);
 
   margin: 0;
   padding: 0;
