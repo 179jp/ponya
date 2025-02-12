@@ -24,7 +24,12 @@ fs.readFile(templatePath, 'utf8', (readErr, data) => {
   }
 
   // 正規表現で isbn の項目（例: isbn: ""）を置換
-  const updatedData = data.replace(/^(isbn:\s*")\s*(")/m, `$1${isbn}$2`);
+  let updatedData = data.replace(/^(isbn:\s*")\s*(")/m, `$1${isbn}$2`);
+
+  // addDate を今日の日付に置換する
+  // addDate: 2025-00-00
+  const date = new Date().toISOString().split('T')[0];
+  updatedData = updatedData.replace("addDate: 2025-00-00", `addDate: ${date}`);
 
   fs.writeFile(newFilePath, updatedData, 'utf8', (writeErr) => {
     if (writeErr) {
