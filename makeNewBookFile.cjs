@@ -10,9 +10,11 @@ if (!isbn) {
   process.exit(1);
 }
 
+const formattedIsbn = isbn.toLowerCase();
+
 // テンプレートファイルと作成先ファイルのパスを設定
-const templatePath = path.join(__dirname, 'src', 'content', '_tmp', 'book.mdx');
-const newFilePath  = path.join(__dirname, 'src', 'content', 'books', `${isbn}.mdx`);
+const templatePath = path.join(__dirname, 'src', 'content', 'books', '_.md');
+const newFilePath  = path.join(__dirname, 'src', 'content', 'books', `${formattedIsbn}.mdx`);
 
 // テンプレートを読み込み、isbn の部分を置換して新ファイルを作成
 fs.readFile(templatePath, 'utf8', (readErr, data) => {
