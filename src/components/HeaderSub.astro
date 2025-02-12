@@ -1,0 +1,10 @@
+---
+const { theme } = Astro.props;
+---
+
+<header class={`mx-2 border-b border-neutral-300`}>
+	<nav class={`flex justify-between text-xs text-center py-2`}>
+		<p class={`w-18`}><a href="/">←</a></p>
+		<p class={``}>{theme}</p>
+	</nav>
+</header>
