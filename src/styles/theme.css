@@ -5,13 +5,20 @@
 .text-vertical {
   writing-mode: vertical-rl;
   font-feature-settings: "vpal";
+  line-break: normal;
+  hanging-punctuation: allow-end;
   p {
     text-align: justify;
   }
+  em {
+    font-style: normal;
+    text-combine-upright: all;
+    -webkit-text-combine: all;
+  }
   blockquote {
     border: none;
-    font-size: var(--text-base);
-    color: var(--color-stone-700);
+    font-size: theme('fontSize.base');
+    color: theme('colors.stone.700');
   }
 }
 .ponShelf  {
