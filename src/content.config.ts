@@ -1,25 +1,14 @@
-import { glob } from "astro/loaders";
-import { defineCollection, z } from "astro:content";
-
-// Blog
-const blogCollection = defineCollection({
-  // Load Markdown and MDX files in the `src/content/blog/` directory.
-  loader: glob({ base: "./src/content/blog/2025/", pattern: "**/*.{md,mdx}" }),
-  // Type-check frontmatter using a schema
-  schema: z.object({
-    date: z.coerce.date(),
-    heroImage: z.string().optional(),
-  }),
-});
+import { defineCollection, reference, z } from "astro:content";
+import { glob, file } from 'astro/loaders';
 
 // Books
-const bookCollection = defineCollection({
-  // Load Markdown and MDX files in the `src/content/blog/` directory.
-  loader: glob({ base: "./src/content/books/", pattern: "**/*.{md,mdx}" }),
-  // Type-check frontmatter using a schema
+const books = defineCollection({
+  loader: glob({ pattern: '**/*{md,mdx}', base: './src/content/books' }),
   schema: z.object({
     title: z.string(),
     author: z.string(),
+    translater: z.string().optional(),
+    illustrator: z.string().optional(),
     page: z.number(),
     isbn: z.string(),
     publishDate: z.coerce.date(),
@@ -32,7 +21,29 @@ const bookCollection = defineCollection({
   }),
 });
 
+// Shelves
+const shelves = defineCollection({
+  loader: glob({ pattern: '**/*{md,mdx}', base: './src/content/shelves' }),
+  schema: z.object({
+    theme: z.string(),
+    layout: z.enum(['1-1', '1-2', '3', '8']),
+    selectedBooks: z.array(reference('books')),
+  }),
+});
+
+// 2025
+const store2025 = defineCollection({
+  loader: glob({ pattern: '**/*{md,mdx}', base: './src/content/store2025' }),
+  schema: z.object({
+    date: z.coerce.date(),
+    theme: z.string(),
+    heroBook: reference('books').optional(),
+    selectedShelves: z.array(reference('shelves')).default([]),
+  }),
+});
+
 export const collections = {
-  blog: blogCollection,
-  books: bookCollection,
+  books,
+  shelves,
+  store2025,
 };
