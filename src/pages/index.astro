@@ -1,11 +1,13 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, getEntry, getEntries, render } from 'astro:content';
 
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
 import Logo from '../components/Logo.astro';
+import BookShelfHeader from '../components/BookShelfHeader.astro';
+import BookShelf from '../components/BookShelf.astro';
 import BookCover from '../components/BookCover.astro';
 import BookShelf1 from '../components/BookShelf_1.astro';
 import BookShelf1_2 from '../components/BookShelf_1-2.astro';
@@ -14,11 +16,14 @@ import BookShelf8 from '../components/BookShelf_8.astro';
 
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
-// Books
-const books = (await getCollection('books')).sort(
-	(a, b) => b.data.addDate.valueOf() - a.data.addDate.valueOf(),
+// Today
+const storesData = (await getCollection('store2025')).sort(
+	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
-
+const data = storesData[0];
+const heroBook = await getEntry(data.data.heroBook);
+const shelves = await getEntries(data.data.selectedShelves);
+const { Content } = await render(data);
 ---
 
 <!doctype html>
@@ -27,47 +32,23 @@ const books = (await getCollection('books')).sort(
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body class={`bg-neutral-200 text-neutral-600`}>
-		<Header num={books.length} />
+		<Header theme={data.data.theme} date={data.data.date} />
 		<main>
-			<div class={`
-				ponShelf px-2 py-4
-				text-vertical 
-				border-b border-neutral-300
-				w-full
-				overflow-x-auto overflow-y-hidden
-				items-center gap-2`}>
-				<Logo />
-				<p class={`text-sm`}>
-					ようこそ、いらっしゃいませ。週末は突然の雪景色。寒いのは嫌ですけど、雪が振るとうれしくなり、雪を頭に積もらせながら雪だるまを作った週末でした。
-				</p>
-				<BookCover isbn={books[0].data.isbn} title={books[0].data.title} />
-			</div>
-			<BookShelf3
-				books={[books[1], books[2], books[3]]}
-				/>
-			<BookShelf1
-				book={books[4]}
-				text="ようこそ、いらっしゃいませ。週末は突然の雪景色。寒いのは嫌ですけど、雪が振ると少しうれしくなります。普段は絶対触らないような、道端に積もった雪を、拾い集めて、雪だるまをつくり遊びました。今日は泥だらけの靴で息子が帰ってきました。「大変だ」と言って帰ってきました。"
-				/>
-			<BookShelf8
-				books={[
-					books[5], books[6], books[7], books[8], books[9],
-					books[10], books[11], books[12], books[13], books[14],
-				]}
-				/>
-			<BookShelf8
-				books={[
-					books[15], books[16], books[17], books[18], books[19],
-					books[20], books[21], books[22], books[23], books[24],
-				]}
-				/>
-			<BookShelf1_2
-			book={books[25]}
-			text="「おもしろいから書くのではない、書いているからどんどんおもしろいことが増える」小説、エッセイ、短歌、絵本と幅広い創作で注目される作家、くどうれいん。その創作の原点は日記にあった。そんな彼女の日記の初の書籍化が本書である。日々の短文日記=「日記の練習」とそれをもとにしたエッセイ「日記の本番」をとおして浮かび上がる、作家くどうれいん一年間の生活と思考と情動。書かなかった日も、あまりに長くなってしまう日も、それこそが日常のなかの日記だ。"
-			/>
-			<BookShelf3
-				books={[books[26], books[27], books[28]]}
-				/>
+			<BookShelfHeader
+				book={heroBook}
+				>
+				<Content />
+			</BookShelfHeader>
+			{
+				shelves.map((shelf) => (
+						<BookShelf
+							books={shelf.data.selectedBooks}
+							layout={shelf.data.layout}
+							shelf={shelf}
+							/>
+					)
+				)
+			}
 		</main>
 		<Footer />
 	</body>
