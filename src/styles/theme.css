@@ -8,6 +8,11 @@
   p {
     text-align: justify;
   }
+  blockquote {
+    border: none;
+    font-size: var(--text-base);
+    color: var(--color-stone-700);
+  }
 }
 .ponShelf  {
   height: 16rem;
