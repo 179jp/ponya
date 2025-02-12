@@ -1,0 +1,28 @@
+---
+import { getEntries, render } from 'astro:content';
+const { books, layout, shelf } = Astro.props;
+
+import BookCover from './BookCover.astro';
+
+const selectedBooks = await getEntries(books);
+const shelfeSize = layout == '8' ? 'ponShelf-s' : 'ponShelf-m';
+const hasContent = layout == '1-1' || layout == '1-2';
+const isTextFirst = layout == '1-2' ? true : false;
+const { Content } = await render(shelf);
+---
+
+<div class={`
+  ponShelf ${shelfeSize} text-vertical 
+  w-full py-4 px-2
+  border-b border-neutral-300
+  overflow-x-auto overflow-y-hidden
+  gap-2`}>
+  { hasContent && isTextFirst && <div class={`text-sm`}><Content /></div> }
+  { 
+    books.length > 0 &&
+    selectedBooks.map((book) => (
+      <BookCover isbn={book.data.isbn} title={book.data.title} />
+    ))
+  }
+  { hasContent && ! isTextFirst && <div class={`text-sm`}><Content /></div> }
+</div>
