@@ -10,6 +10,9 @@
   p {
     text-align: justify;
   }
+  p:first-child {
+    text-indent: 1em;
+  }
   em {
     font-style: normal;
     text-combine-upright: all;
