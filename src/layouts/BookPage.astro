@@ -11,6 +11,7 @@ import BookCover from "../components/BookCover.astro";
 const {
   slug,
   title,
+  author,
   page,
   isbn,
   publishDate,
@@ -45,7 +46,12 @@ const formatPublishDate = publishDate.toLocaleDateString("ja-jp", {
         overflow-hidden
         items-start gap-2`}
       >
-        <Logo info={[title, isbn, `${publisher}/${formatPublishDate}`]} />
+        <Logo
+          forDetailPage={true}
+          title={title}
+          author={author}
+          info={[`発行：${publisher}`, `${formatPublishDate}`, isbn]}
+        />
         <BookCover isbn={isbn} title={title} />
       </div>
     </main>

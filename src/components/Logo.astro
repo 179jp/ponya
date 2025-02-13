@@ -1,5 +1,10 @@
 ---
-const { info = [] } = Astro.props;
+const {
+  forDetailPage = false,
+  title = "",
+  author = "",
+  info = [],
+} = Astro.props;
 ---
 
 <div
@@ -26,15 +31,20 @@ const { info = [] } = Astro.props;
       fill="black"></path>
   </svg>
   {
-    info.length === 0 && (
+    !forDetailPage && (
       <p class={`text-2xs shrink`}>
         猫の店長 ぽんちょとぽん家が毛だらけでウェブ上で営む本屋です。
       </p>
     )
   }
   {
-    info.length > 0 && (
-      <p class={`text-2xs shrink whitespace-pre`}>{info.join("\n")}</p>
+    forDetailPage && (
+      <div class={``}>
+        <p class={`text-xs shrink`}>
+          『{title}』<span class={`pt-3`}>{author}</span>
+        </p>
+        <p class={`text-2xs text-right pt-8`}>{info.join("　")}</p>
+      </div>
     )
   }
 </div>
