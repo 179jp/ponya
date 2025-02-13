@@ -1,18 +1,19 @@
 ---
-import { getCollection, getEntry, getEntries, render } from 'astro:content';
+import { getCollection, getEntry, getEntries, render } from "astro:content";
+import { ClientRouter } from "astro:transitions";
 
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
-import BookShelfHeader from '../components/BookShelfHeader.astro';
-import BookShelf from '../components/BookShelf.astro';
+import BookShelfHeader from "../components/BookShelfHeader.astro";
+import BookShelf from "../components/BookShelf.astro";
 
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
 // Today
-const storesData = (await getCollection('store2025')).sort(
-	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+const storesData = (await getCollection("store2025")).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
 const data = storesData[0];
 const heroBook = await getEntry(data.data.heroBook);
@@ -22,28 +23,26 @@ const { Content } = await render(data);
 
 <!doctype html>
 <html lang="ja">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body class={`bg-neutral-200 text-neutral-600`}>
-		<Header theme={data.data.theme} date={data.data.date} />
-		<main>
-			<BookShelfHeader
-				book={heroBook}
-				>
-				<Content />
-			</BookShelfHeader>
-			{
-				shelves.map((shelf) => (
-						<BookShelf
-							books={shelf.data.selectedBooks}
-							layout={shelf.data.layout}
-							shelf={shelf}
-							/>
-					)
-				)
-			}
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <ClientRouter />
+  </head>
+  <body class={`bg-neutral-200 text-neutral-600`}>
+    <Header theme={data.data.theme} date={data.data.date} />
+    <main>
+      <BookShelfHeader book={heroBook}>
+        <Content />
+      </BookShelfHeader>
+      {
+        shelves.map((shelf) => (
+          <BookShelf
+            books={shelf.data.selectedBooks}
+            layout={shelf.data.layout}
+            shelf={shelf}
+          />
+        ))
+      }
+    </main>
+    <Footer />
+  </body>
 </html>
