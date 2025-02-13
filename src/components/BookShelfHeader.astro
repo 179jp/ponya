@@ -1,17 +1,19 @@
 ---
 const { book } = Astro.props;
 
-import BookCover from './BookCover.astro';
-import Logo from './Logo.astro';
+import BookCover from "./BookCover.astro";
+import Logo from "./Logo.astro";
 ---
 
-<div class={`
+<div
+  class={`
   ponShelf px-2 py-4
   text-vertical 
   border-b border-neutral-300
   w-full
   overflow-x-auto overflow-y-hidden
-  items-center gap-2`}>
+  items-center gap-2`}
+>
   <Logo />
   <div class={`text-sm`}>
     <slot />
