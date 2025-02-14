@@ -15,10 +15,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 const storesData = (await getCollection("store2025")).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
-const data = storesData[0];
-const heroBook = await getEntry(data.data.heroBook);
-const shelves = await getEntries(data.data.selectedShelves);
-const { Content } = await render(data);
+const today = storesData[0];
+const heroBook = await getEntry(today.data.heroBook);
+const shelves = await getEntries(today.data.selectedShelves);
+const { Content } = await render(today);
 ---
 
 <!doctype html>
@@ -28,7 +28,7 @@ const { Content } = await render(data);
     <ClientRouter />
   </head>
   <body class={`bg-neutral-200 text-neutral-600`}>
-    <Header theme={data.data.theme} date={data.data.date} />
+    <Header theme={today.data.theme} date={today.data.date} />
     <main
       class={`
 				grid

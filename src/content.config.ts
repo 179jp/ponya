@@ -38,7 +38,20 @@ const store2025 = defineCollection({
     date: z.coerce.date(),
     theme: z.string(),
     heroBook: reference('books').optional(),
+    type: z.enum(['shelves', 'direct']),
     selectedShelves: z.array(reference('shelves')).default([]),
+    shelf_2: z.object({
+      theme: z.string(),
+      books: z.array(reference('books')).default([]),
+    }).optional(),
+    shelf_3: z.object({
+      theme: z.string(),
+      books: z.array(reference('books')).default([]),
+    }).optional(),
+    shelf_4: z.object({
+      theme: z.string(),
+      books: z.array(reference('books')).default([]),
+    }).optional(),
   }),
 });
 
