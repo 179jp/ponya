@@ -10,10 +10,13 @@ const {
 <div
   class={`
   border-l border-neutral-300 px-2 pl-2
-  flex flex-row gap-4 items-center`}
+  flex flex-row gap-2 items-center
+  md:w-[14rem] md:px-0
+  md:flex-col-reverse md:items-start md:justify-end
+  `}
 >
   <svg
-    class={`flex-none`}
+    class={`flex-none md:w-[70%] md:h-full md:object-contain`}
     width="40"
     height="82"
     viewBox="0 0 40 82"
@@ -32,8 +35,10 @@ const {
   </svg>
   {
     !forDetailPage && (
-      <p class={`text-2xs shrink`}>
-        猫の店長 ぽんちょとぽん家が毛だらけでウェブ上で営む本屋です。
+      <p class={`text-2xs shrink md:text-xs`}>
+        猫の店長 ぽんちょとぽん家が
+        <br class={`hidden md:inline`} />
+        毛だらけでウェブ上で営む本屋です。
       </p>
     )
   }

@@ -6,6 +6,7 @@ export default {
 			fontSize: {
 				'2xs': '.625rem',
 				sm: ['0.8125rem', 'calc(1.5 / 0.8125)'],
+				base: ['1.0625rem', 'calc(2 / 1.0625)']
 			}
 		},
 	},

@@ -1,5 +1,5 @@
 ---
-const { book } = Astro.props;
+const { book, class: className } = Astro.props;
 
 import BookCover from "./BookCover.astro";
 import Logo from "./Logo.astro";
@@ -12,10 +12,12 @@ import Logo from "./Logo.astro";
   border-b border-neutral-300
   w-full
   overflow-x-auto overflow-y-hidden
-  items-center gap-2`}
+  items-center gap-2
+  md:gap-8
+  ${className}`}
 >
   <Logo />
-  <div class={`text-sm`}>
+  <div class={`text-sm md:text-base`}>
     <slot />
   </div>
   <BookCover isbn={book.data.isbn} title={book.data.title} />
