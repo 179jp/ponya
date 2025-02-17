@@ -1,0 +1,24 @@
+---
+const { img, num, class: className, title, text } = Astro.props;
+---
+
+<div
+  class={`
+  ponShelf ponShelf-m text-vertical 
+  w-full py-4 px-2
+  border-b border-neutral-300
+  overflow-x-auto overflow-y-hidden
+  gap-2 md:gap-4
+  pc-grid-pos-${num} index_${num}
+  `}
+>
+  <h3 class={`text-base`}>{title}</h3>
+  <img
+    class:list={["w-full", "h-full", "object-cover", "rounded-md", "grayscale"]}
+    src={img}
+    alt={title}
+  />
+  <div class={`text-sm`}>
+    {text}
+  </div>
+</div>

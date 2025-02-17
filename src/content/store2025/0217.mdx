@@ -7,6 +7,7 @@ text: 'いらっしゃいませ。あたたくて、いい天気の週末でし�
 ---
 
 import BookShelf from "../../components/BookShelfForMdx.astro";
+import Note from "../../components/Note.astro";
 
 <BookShelf
     num={2}
@@ -37,11 +38,11 @@ import BookShelf from "../../components/BookShelfForMdx.astro";
 
 <BookShelf
     num={4}
-    layout={'1-1'}
+    layout={'1-2'}
     books={[
       'b0dthjjr2n',
     ]}
-    theme="気になる本"
+    theme="エッセイ"
   >
     <p>今月の特集は「<em>44</em>人の孤独の時間」。さまざまな人が孤独の定義や、孤独の時間の過ごし方、思い出について綴っていて、おもしろい。</p>
   </BookShelf>
@@ -57,29 +58,25 @@ import BookShelf from "../../components/BookShelfForMdx.astro";
     theme="いま、読みたい本"
   />
 
-<BookShelf
-    num={6}
-    layout={'1-2'}
-    books={[
-      'b0dthjjr2n',
-    ]}
-    theme="気になる本"
-  >
-    <p>今月の特集は「<em>44</em>人の孤独の時間」。さまざまな人が孤独の定義や、孤独の時間の過ごし方、思い出について綴っていて、おもしろい。</p>
-  </BookShelf>
-
-  <BookShelf
-    num={7}
-    layout={'8'}
-    books={[
-      '406533229x',
-      '4041141788',
-      '4576230336',
-      '4150123098',
-      '402252023x',
-      '4047381071',
-      '4163919082',
-      '4087441342',
-    ]}
-    theme="気になる本"
+<Note
+  num={6}
+  img="/img/poncho/IMG_8608.jpg"
+  title="週末の店長"
+  text="バレンタインにシシャモに大忙しだった週末の店長。いつも以上に丸い顔で、晩ごはんまで真剣に瞑想していました。いくつになっても食に貪欲で、変わらない姿勢は万人に勇気と希望を与えます。"
   />
+
+<BookShelf
+  num={7}
+  layout={'8'}
+  books={[
+    '406533229x',
+    '4041141788',
+    '4576230336',
+    '4150123098',
+    '402252023x',
+    '4047381071',
+    '4163919082',
+    '4087441342',
+  ]}
+  theme="気になる本"
+/>
