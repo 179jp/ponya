@@ -38,11 +38,18 @@ const layoutShelves = today.data.type === "shelves";
 			`}
     >
       <BookShelfHeader book={heroBook} class={`pc-grid-pos-1`}>
-        <div class={`text-sm md:text-base`}>
-          <p>{today.data.text}</p>
-        </div>
+        <Content />
       </BookShelfHeader>
-      <Content />
+      {
+        shelves.map((shelf, index) => (
+          <BookShelf
+            books={shelf.data.selectedBooks}
+            num={index + 2}
+            layout={shelf.data.layout}
+            shelf={shelf}
+          />
+        ))
+      }
     </main>
     <Footer />
   </body>

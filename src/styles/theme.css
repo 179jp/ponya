@@ -10,9 +10,6 @@
   p {
     text-align: justify;
   }
-  p:first-child {
-    text-indent: 1em;
-  }
   em {
     font-style: normal;
     text-combine-upright: all;
@@ -23,6 +20,9 @@
     font-size: theme('fontSize.base');
     color: theme('colors.stone.700');
   }
+}
+.text-vertical > p:first-child {
+  text-indent: 1em;
 }
 .ponShelf  {
   height: 16rem;

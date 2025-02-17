@@ -17,7 +17,10 @@ const books = defineCollection({
     amazonLink: z.string().optional(),
     kindleLink: z.string().optional(),
     audibleLink: z.string().optional(),
-    updatedDate: z.coerce.date().optional(),
+    otherLink: z.object({
+      url: z.string(),
+      siteName: z.string()
+    }).optional(),
   }),
 });
 
@@ -40,18 +43,7 @@ const store2025 = defineCollection({
     heroBook: reference('books').optional(),
     type: z.enum(['shelves', 'direct']),
     selectedShelves: z.array(reference('shelves')).default([]),
-    shelf_2: z.object({
-      theme: z.string(),
-      books: z.array(reference('books')).default([]),
-    }).optional(),
-    shelf_3: z.object({
-      theme: z.string(),
-      books: z.array(reference('books')).default([]),
-    }).optional(),
-    shelf_4: z.object({
-      theme: z.string(),
-      books: z.array(reference('books')).default([]),
-    }).optional(),
+    text: z.string().optional(),
   }),
 });
 

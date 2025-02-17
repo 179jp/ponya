@@ -1,46 +1,47 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection } from "astro:content";
 
-import BaseHead from '../../components/BaseHead.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import BookCover from '../../components/BookCover.astro';
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import BookCover from "../../components/BookCover.astro";
 
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 
 // Books
-const books = (await getCollection('books')).sort(
-	(a, b) => b.data.addDate.valueOf() - a.data.addDate.valueOf(),
+const books = (await getCollection("books")).sort(
+  (a, b) => b.data.addDate.valueOf() - a.data.addDate.valueOf()
 );
-
 ---
 
 <!doctype html>
 <html lang="ja">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body class={`bg-neutral-200 text-neutral-600`}>
-		<Header num={books.length} />
-		<main>
-			<div class={`grid grid-cols-10 gap-4 p-4`}>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class={`bg-neutral-200 text-neutral-600`}>
+    <Header num={books.length} />
+    <main>
+      <div class={`grid grid-cols-10 gap-4 p-4`}>
         {
           books.map((book) => {
-							if(book.data.isbn){
-								return(
-								<div class={`grid-item pb-8`}>
-									<img 
-										class={`w-full h-full object-contain`}
-										src={`/img/books/${book.data.isbn}.jpg`} />
-									<p class={`text-2xs text-center`}>{book.data.isbn}</p>
-								</div>
-								)
-							} 
-						}
-          )
+            if (book.data.isbn) {
+              return (
+                <div class={`grid-item pb-8`}>
+                  <img
+                    class={`w-full h-full object-contain`}
+                    src={`/img/books/${book.data.isbn}.jpg`}
+                  />
+                  <p class={`text-2xs text-center`}>
+                    {book.data.isbn.toLowerCase()}
+                  </p>
+                </div>
+              );
+            }
+          })
         }
       </div>
-		</main>
-		<Footer />
-	</body>
+    </main>
+    <Footer />
+  </body>
 </html>

@@ -54,6 +54,17 @@ const formatPublishDate = publishDate.toLocaleDateString("ja-jp", {
         />
         <BookCover isbn={isbn} title={title} />
       </div>
+      <div
+        class={`
+        ponShelf px-2 py-4
+        text-vertical text-sm
+        border-b border-neutral-300
+        w-full
+        overflow-x-auto overflow-y-hidden
+        items-start gap-2`}
+      >
+        <slot />
+      </div>
     </main>
     <Footer />
   </body>
